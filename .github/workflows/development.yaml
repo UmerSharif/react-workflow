@@ -28,7 +28,7 @@ jobs:
       - name: setup cache
         uses: actions/cache@v1
         with:
-           path: ${{ steps.npm-cache.outputs.dir }}
+           path: ${{ steps.yarn-cache-dir.outputs.dir }}
            key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       # Deploy to Netlify using our dev secrets
       - name: Install
